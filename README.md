@@ -1,0 +1,2 @@
+# AetheriaDiscordBot
+Test
