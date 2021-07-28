@@ -9,7 +9,6 @@ class CogName(commands.Cog): # Defines the cog name.
     async def on_ready(self): # Sends a console messages when the cog is loaded.
         print('Template cog successfully loaded.')
 
-
     @commands.command(name='command', help='A simple description of the command.')
     async def command(self, ctx): # Adds a simple template command.
         await print('Template command used.')
