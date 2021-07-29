@@ -1,3 +1,3 @@
 from replit import db
 
-# Todo
+db["key"] = "value"

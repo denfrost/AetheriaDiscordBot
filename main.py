@@ -20,7 +20,7 @@ async def on_ready():
     print(f'{bot.user.name} is ready for micromanagement.')
 
     # Changes the bot's status.
-    await bot.change_presence(status=discord.Status.online, activity=discord.Game('with Employees'))
+    await bot.change_presence(status=discord.Status.online, activity=discord.Game('Aetheria Project Management'))
 
     for filename in os.listdir('./cogs'):
       if filename.endswith('.py'):
