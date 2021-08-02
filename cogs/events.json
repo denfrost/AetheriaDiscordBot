@@ -1,0 +1,14 @@
+{
+	"events": [
+		{
+			"name": "Test Event 1",
+			"time": "00:00:00",
+			"executed": false
+		},
+		{
+			"name": "Test Event 2",
+			"time": "00:00:01",
+			"executed": false
+		}
+	]
+}
