@@ -2,12 +2,20 @@
 	"events": [
 		{
 			"name": "Test Event 1",
-			"time": "00:00:00",
+			"time": {
+        "day": 5,
+        "hour": 18,
+        "minute": 0
+      },
 			"executed": false
 		},
 		{
 			"name": "Test Event 2",
-			"time": "00:00:01",
+			"time": {
+        "day": 7,
+        "hour": 3,
+        "minute": 6
+      },
 			"executed": false
 		}
 	]
