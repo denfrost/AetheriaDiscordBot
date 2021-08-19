@@ -3,19 +3,19 @@
 		{
 			"name": "Test Event 1",
 			"time": {
-        "day": 5,
-        "hour": 18,
-        "minute": 0
-      },
+				"day": 5,
+				"hour": 18,
+				"minute": 0
+			},
 			"executed": false
 		},
 		{
 			"name": "Test Event 2",
 			"time": {
-        "day": 7,
-        "hour": 3,
-        "minute": 6
-      },
+				"day": 7,
+				"hour": 3,
+				"minute": 6
+			},
 			"executed": false
 		}
 	]
