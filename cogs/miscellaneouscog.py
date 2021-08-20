@@ -18,6 +18,17 @@ class Miscellaneous(commands.Cog, description='Random, unassigned commands.'):
       with open('./static/version.txt', "r") as file:
         version = file.read()
       await ctx.send('Current bot version: `' + version + '`')
+    
+    @commands.command(name='dashboard', help="DM's the user a link to the  bot dashboard.")
+    @commands.has_role('Developer (Aetheria)')
+    async def dashboard(self, ctx):
+      user = ctx.author
+      await user.send('Dashboard: https://phbconsole.ddns.net/')
+    
+    @dashboard.error # <- name of the command + .error
+    async def dashboard_error(ctx, error):
+      if isinstance(error, commands.MissingRole):
+        await ctx.send('Only Aetheria developers can use this command. You lack the role Developer (Aetheria).')
 
 def setup(bot):
     bot.add_cog(Miscellaneous(bot))
