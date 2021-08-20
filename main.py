@@ -1,18 +1,19 @@
 # Imports
 import discord
 from discord.ext import commands
+from pretty_help import PrettyHelp
 import os
 import keep_alive
 
 # Defines necessary variables.
 TOKEN = os.environ['BOT_TOKEN']
-description = 'Test'
+description = 'The manager of the Aetheria Project.'
 
 # Keeps web dashboard online.
 keep_alive.keep_alive()
 
 # Defines 'bot', and it's prefix and description.
-bot = commands.Bot(command_prefix='`', description=description)
+bot = commands.Bot(command_prefix='`', help_command=PrettyHelp(color=5, index_title='Command Categories'), description=description)
 
 @bot.event
 async def on_ready():
@@ -25,5 +26,6 @@ async def on_ready():
     for filename in os.listdir('./cogs'):
       if filename.endswith('.py'):
         bot.load_extension(f'cogs.{filename[:-3]}')
+
 
 bot.run(TOKEN, reconnect=True)
